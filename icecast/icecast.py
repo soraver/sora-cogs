@@ -25,7 +25,7 @@ class IceCast(commands.Cog):
                 icejson = json_resp
                 streams = icejson['icecasts']['source']
                 for s in streams:
-                    if s['listenurl'] == 'http://pantelwolf.info:12345/fisherman' and s['bitrate']:
+                    if s['listenurl'] == 'http://pantelwolf.info:12345/stream' and s['bitrate']:
                         title = s['title']
                         listeners = s['listeners']
                         return title, listeners
