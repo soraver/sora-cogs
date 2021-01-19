@@ -23,8 +23,8 @@ class IceCast(commands.Cog):
             async with self.session.get(url) as resp:
                 json = json.loads(resp)
                 streams = json['icecasts']['source']
-                for s in streams
-                    if s['listenurl'] == 'http://pantelwolf.info:12345/fisherman' && s['bitrate']
+                for s in streams:
+                    if s['listenurl'] == 'http://pantelwolf.info:12345/fisherman' && s['bitrate']:
                         title = s['title']
                         listeners = s['listeners']
                         return title, listeners
@@ -39,7 +39,7 @@ class IceCast(commands.Cog):
     @commands.command(aliases=["icynp"])
     async def icecast(self, ctx, url=None):
         """Show Icecast stream information, if any."""
-        if not url
+        if not url:
           url = 'https://radio.pantelwolf.info:12345/status-json.xsl'
         icy = await self._icecast(url)
         if not icy[0]:
