@@ -21,7 +21,7 @@ class IceCast(commands.Cog):
     async def _icecast(self, url: str):
         try:
             async with self.session.get(url) as resp:
-                icejson = json.loads(resp)
+                icejson = json.loads(resp.data)
                 streams = icejson['icecasts']['source']
                 for s in streams:
                     if s['listenurl'] == 'http://pantelwolf.info:12345/fisherman' and s['bitrate']:
