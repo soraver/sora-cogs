@@ -1,7 +1,7 @@
 {
     "author" : ["soraver"],
-    "install_msg" : "Repo Installed ;p",
-    "name" : "soraver's Cogs",
+    "install_msg" : "Repo Installed",
+    "name" : "soraver Cogs",
     "short" : "Cogs by soraver",
     "description" : "Cogs by soraver"
 }
