@@ -37,8 +37,10 @@ class icecast(commands.Cog):
 
     @commands.guild_only()
     @commands.command(aliases=["icynp"])
-    async def icecast(self, ctx, url):
+    async def icecast(self, ctx, url=None):
         """Show Icecast stream information, if any."""
+        if not url
+          url = 'https://radio.pantelwolf.info:12345/status-json.xsl'
         icy = await self._icecast(url)
         if not icy[0]:
             return await ctx.send(
