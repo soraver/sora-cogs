@@ -7,7 +7,7 @@ import json
 from redbot.core import commands
 
 
-class icecast(commands.Cog):
+class IceCast(commands.Cog):
     """icecast stream reader."""
 
     async def red_delete_data_for_user(self, **kwargs):
